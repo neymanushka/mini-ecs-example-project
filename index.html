@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>@robatbobat/mini-ecs example project</title>
+		<script type="module" src="./bundle.js"></script>
+	</head>
+	<style>
+		html,
+		body {
+			overflow: hidden;
+			width: 100%;
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+		.debug {
+			position: absolute;
+			right: 20px;
+			top: 20px;
+			width: 100px;
+			height: 100px;
+			background-color: blueviolet;
+			color: white;
+			padding: 10px;
+		}
+
+		.icons-panel {
+			position: absolute;
+			right: 20px;
+			bottom: 20px;
+			width: 100px;
+			height: 300px;
+			background-color: goldenrod;
+			color: white;
+			padding: 10px;
+			border-radius: 8px;
+			display: flex;
+			flex-flow: column nowrap;
+		}
+
+		.tower-icon {
+			position: relative;
+			width: 80px;
+			height: 80px;
+			color: white;
+			padding: 10px;
+			margin-bottom: 10px;
+			cursor: move;
+			text-align: center;
+		}
+
+		.tower-type-one {
+			background-color: blue;
+		}
+
+		.tower-type-two {
+			background-color: blueviolet;
+		}
+
+		.clear-button {
+			margin-bottom: 0;
+			background-color: rgb(80, 255, 147);
+		}
+
+		.clear-button > button {
+			width: 100%;
+			height: 100%;
+			background-color: rgb(80, 255, 147);
+			font-size: 40px;
+			font-weight: bold;
+		}
+	</style>
+	<body>
+		<div class="debug">
+			<div class="delta-time"></div>
+			<div class="entities"></div>
+			<div class="test"></div>
+		</div>
+		<div class="icons-panel">
+			<div class="tower-icon tower-type-one" draggable="true">drag me</div>
+			<div class="tower-icon tower-type-two" draggable="true">drag me</div>
+			<div class="tower-icon clear-button">
+				<button>&#x21bb;</button>
+			</div>
+		</div>
+		<canvas></canvas>
+	</body>
+</html>
